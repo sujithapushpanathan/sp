@@ -1,0 +1,9 @@
+{
+	"name": "sp-data-factorynew",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "08baf86e-f0b9-4141-bb53-f9cfcc508887",
+		"tenantId": "f1fc905d-9ddc-4933-9e38-8a89c99c4b55"
+	}
+}
