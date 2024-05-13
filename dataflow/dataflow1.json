@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "AzureSynapseAnalyticsTable1",
+						"referenceName": "AzureSynapseAnalyticsTable2",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"
@@ -87,7 +87,15 @@
 				"     allowCopyCommand: true,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          PrimaryGenre,",
+				"          year,",
+				"          AverageRating,",
+				"          HighestRead,",
+				"          LowestRead,",
+				"          NumberOfMovies",
+				"     )) ~> sink1"
 			]
 		}
 	}
